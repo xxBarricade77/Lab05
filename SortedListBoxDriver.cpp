@@ -40,7 +40,7 @@ void deleteCDs(ListArray<CD>* list)
 }
 
 int main(int argc, char* argv[])
-{
+{/*
    Gtk::Main kit(argc, argv);  //this must be first
    ListArray<CD>* cds = CD::readCDs("cds.txt");
    //DO THIS
@@ -85,5 +85,5 @@ int main(int argc, char* argv[])
    delete cds;
    delete lstCDs;
 
-   return 0;
+   return 0;*/
 }
