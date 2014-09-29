@@ -104,6 +104,7 @@ NextNode<T>** SortedListLinked<T>::find(T* item)
 
    //DO THIS
    //loop to find the correct location to insert/remove item
+
 	int compare = (*compare_items) (item, curr->getItem());
 	
 	while(curr != NULL && compare > 0)
@@ -125,6 +126,7 @@ NextNode<T>** SortedListLinked<T>::find(T* item)
 template < class T >
 void SortedListLinked<T>::add(T* item)
 {
+   int compare;
    NextNode<T>* node = new NextNode<T>(item);
 
    //special case: adding to an empty list
@@ -142,12 +144,14 @@ void SortedListLinked<T>::add(T* item)
 
    //DO THIS
    //adding to the top of the list (check prev)
+
    if (prev == NULL)
    {
 		curr = head;
 		head -> setNext(node);
 		node -> setNext(curr);
    }
+
    else    //general add
    {
 		prev -> setNext(node);
